@@ -1,0 +1,11 @@
+/* 这个文件用于定义全局样式，目前为空 */
+
+#quick-search-popup {
+  background: transparent;
+  border: none;
+}
+
+#quick-search-popup iframe {
+  border: none;
+  border-radius: 8px;
+} 
