@@ -83,7 +83,13 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     
     if (elements.container.style.display === 'block') {
       // 加载popup内容
-      elements.container.innerHTML = '<iframe src="' + chrome.runtime.getURL('popup/popup.html') + '" frameborder="0" style="width: 400px; height: 120px;"></iframe>';
+      elements.container.innerHTML = '<iframe src="' + chrome.runtime.getURL('popup/popup.html') + '" frameborder="0" style="width: 400px; height: 120px;" autofocus></iframe>';
+      
+      // 确保iframe加载完成后聚焦到搜索框
+      const iframe = elements.container.querySelector('iframe');
+      iframe.onload = () => {
+        iframe.contentWindow.focus();
+      };
     }
   }
 }); 

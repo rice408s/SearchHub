@@ -4,7 +4,6 @@ body {
     width: 400px;
     height: 150px;
     overflow: hidden;
-    /* background: transparent; */
 }
 
 ::-webkit-scrollbar {
@@ -14,6 +13,7 @@ body {
 .search-container {
     width: 100%;
     height: 100%;
+    background: rgba(113, 113, 113, 0.2);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 15px;
@@ -34,22 +34,22 @@ body {
     font-size: 14px;
     outline: none;
     transition: all 0.2s ease;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     color: #000;
 }
 
 #searchInput:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.3);
 }
 
 #searchInput:focus {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.4);
 }
 
 #searchInput::placeholder {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .engine-icons {

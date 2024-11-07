@@ -208,6 +208,10 @@ document.addEventListener('DOMContentLoaded', async function() {
 
   // 确保在DOM加载完成后立即执行
   setTimeout(fillSearchInput, 100);
+  setTimeout(() => {
+    renderEngineIcons();
+    searchInput.focus();
+  }, 150);  // 稍微延后于fillSearchInput执行
 
   renderEngineIcons();
   searchInput.focus();
